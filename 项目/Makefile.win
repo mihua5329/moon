@@ -1,0 +1,58 @@
+# Project: c++版鼠标操作
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o bankrupt.o buyriders.o delete.o mouseput.o orderdivide.o orderput.o output.o put.o ridermove.o routedesign.o
+LINKOBJ  = main.o bankrupt.o buyriders.o delete.o mouseput.o orderdivide.o orderput.o output.o put.o ridermove.o routedesign.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -lgraphics64 -luuid -lmsimg32 -lgdi32 -limm32 -lole32 -loleaut32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = c++版鼠标操作.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+bankrupt.o: bankrupt.cpp
+	$(CPP) -c bankrupt.cpp -o bankrupt.o $(CXXFLAGS)
+
+buyriders.o: buyriders.cpp
+	$(CPP) -c buyriders.cpp -o buyriders.o $(CXXFLAGS)
+
+delete.o: delete.cpp
+	$(CPP) -c delete.cpp -o delete.o $(CXXFLAGS)
+
+mouseput.o: mouseput.cpp
+	$(CPP) -c mouseput.cpp -o mouseput.o $(CXXFLAGS)
+
+orderdivide.o: orderdivide.cpp
+	$(CPP) -c orderdivide.cpp -o orderdivide.o $(CXXFLAGS)
+
+orderput.o: orderput.cpp
+	$(CPP) -c orderput.cpp -o orderput.o $(CXXFLAGS)
+
+output.o: output.cpp
+	$(CPP) -c output.cpp -o output.o $(CXXFLAGS)
+
+put.o: put.cpp
+	$(CPP) -c put.cpp -o put.o $(CXXFLAGS)
+
+ridermove.o: ridermove.cpp
+	$(CPP) -c ridermove.cpp -o ridermove.o $(CXXFLAGS)
+
+routedesign.o: routedesign.cpp
+	$(CPP) -c routedesign.cpp -o routedesign.o $(CXXFLAGS)
