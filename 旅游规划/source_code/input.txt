@@ -1,0 +1,19 @@
+city Beijing 0.9 Shanghai 0.5 Wuhan 0.9 Changsha 0.5 Guangzhou 0.5 Shenzhen 0.2 Dalian 0.2 Nanjing 0.9 Xining 0.2 Hangzhou 0.2 -n 0
+trp p Beijing Guangzhou 2 4
+trp p Beijing Guangzhou 3 2
+trp c Beijing Shanghai 4 9
+trp t Guangzhou Shenzhen 10 4
+trp t Guangzhou Shenzhen 11 2
+trp c Shanghai Shenzhen 8 12
+trp c Shenzhen Changsha 3 5
+trp c Guangzhou Dalian 2 6
+trp c Changsha Dalian 3 8
+trp c Dalian Nanjing 3 5
+trp c Xining Hangzhou 3 2
+trp c Hangzhou Nanjing 2 3
+trp c Dalian Wuhan 3 2
+trp c Nanjing Wuhan 3 5
+trp c Changsha Beijing 3 5
+trp t Wuhan Beijing 1 4
+trp p Nanjing Xining 1 2
+trp c Xining Changsha 3 5
